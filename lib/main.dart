@@ -43,6 +43,12 @@ class MyApp extends StatelessWidget {
           The entire row is in a Container and padded along each edge by 32 pixels.
           */
           FavoriteWidget(),
+          // Managing state part of the tutorial
+          /*
+          TapboxA(),
+          TapboxB(),
+          TapboxC(),
+          */
         ],
       ),
     );
@@ -161,3 +167,11 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
     );
   }
 }
+
+//------------------------- TapboxA ----------------------------------
+
+
+//------------------------- TapboxB ----------------------------------
+
+
+//------------------------- TapboxC ----------------------------------
