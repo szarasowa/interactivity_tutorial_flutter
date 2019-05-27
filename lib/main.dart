@@ -42,13 +42,7 @@ class MyApp extends StatelessWidget {
           The last two items in the title row are a star icon, painted red, and the text '41'.
           The entire row is in a Container and padded along each edge by 32 pixels.
           */
-          FavoriteWidget(),
-          // Managing state part of the tutorial
-          /*
-          TapboxA(),
-          TapboxB(),
-          TapboxC(),
-          */
+          FavoriteWidget()
         ],
       ),
     );
@@ -96,6 +90,10 @@ class MyApp extends StatelessWidget {
             titleSection,
             buttonSection,
             textSection,
+          // Managing state part of the tutorial
+          TapboxA(),
+          // TapboxB(),
+          // TapboxC(),
           ],
         )
       ),
@@ -169,7 +167,38 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
 }
 
 //------------------------- TapboxA ----------------------------------
+class TapboxA extends StatefulWidget {
+  TapboxA({Key key}) : super(key: key);
+  @override _TapboxAState createState() => _TapboxAState();
+}
 
+class _TapboxAState extends State<TapboxA> {
+  bool _active = false;
+
+  void _handleTap() {
+    setState(() {
+     _active = !_active; 
+    });
+  }
+
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: _handleTap,
+      child: Container(
+        child: Center(
+          child: Text(
+            _active ? 'Active' : 'Inactive',
+            style: TextStyle(fontSize: 32.0, color: Colors.white),
+          ),
+        ),
+        height: 200.0,
+        decoration: BoxDecoration(
+          color: _active ? Colors.lightBlue[700] : Colors.grey[600],
+        ),
+      ),
+    );
+  }
+}
 
 //------------------------- TapboxB ----------------------------------
 
