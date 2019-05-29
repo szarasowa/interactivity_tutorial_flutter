@@ -248,7 +248,6 @@ class TapboxB extends StatelessWidget {
             style: TextStyle(fontSize: 32.2, color: Colors.pink),
           ),
         ),
-        width: 200.0,
         height: 200.0,
         decoration: BoxDecoration(
           color: active ? Colors.lightBlue[700] : Colors.grey[600],
@@ -327,7 +326,6 @@ class _TapboxCState extends State<TapboxC> {
             style: TextStyle(fontSize: 32.0, color: Colors.white),
           ),
         ),
-        width: 200.0,
         height: 200.0,
         decoration: BoxDecoration(
           color: widget.active ? Colors.lightBlue[700] : Colors.grey[600],
